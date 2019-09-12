@@ -200,7 +200,45 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
+function removeItem( myGroceryList, shouldRemove){
+  if (!shouldRemove){
+    return []
+  }
+
+  let newArr = []
+
+  for(let i=0; i < myGroceryList.length; i++ ){
+    if(myGroceryList[i] !== shouldRemove){
+     newArr.push(myGroceryList[i])
+
+    }
+  
+  }
+  return newArr
+}
+
+
+function addItem(myGroceryList, added){
+  if(!added){
+    return []
+  }
+  
+  if (myGroceryList) {
+    myGroceryList.unshift(added)
+  }
+  
+  
+  return myGroceryList
+
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -210,7 +248,22 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
+function maker(){
+  // let randomNum = Math.floor(Math.random() * 215)
+  let newArr = [1]
+  
+  for (i = 1; i< 215; i++){
+    newArr.push (i + 1)
+
+
+
+  }
+  return newArr
+  // return Math.floor(Math.random() * 30)
+
+
+
+} 
 
 
 
@@ -226,8 +279,19 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Your output should look like this -> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
+function addTen( arr ) {
+  var newArr = [];
+  
+  for( var i = 0; i < arr.length; i++ ) {
+    almostArray = arr.map(Number)
+    //var result=arr.map(Number)
+    newArr[i] = almostArray[i] + 10
+  }
+  
+  return newArr;
+}
 
+// 2.6 Arrays Practice Problem
 
 
 ////////// PROBLEM 11 //////////
