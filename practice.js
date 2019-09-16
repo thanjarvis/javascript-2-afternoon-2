@@ -315,7 +315,14 @@ for(var i = 0; i < num2; i++){
   Return the longer of the two arrays.
 */
 
-//Code Here
+function longer(arr1, arr2){
+  let arr1L = arr1.length
+  let arr2L = arr2.length
+  if (arr1L > arr2L){
+    return arr1
+  }
+  return arr2
+}
 
 
 
@@ -327,7 +334,27 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+function both(arr1, arr2){
+  let arr3 = []
+
+  if(!arr1){
+    return arr2
+  }
+
+  if(!arr2){
+    return arr1
+  }
+  
+  for(i=0; i < arr1.length; i++ ){
+    for(j=0; j< arr2.length; j++){
+      if(arr1[i] === arr2[j]){
+        arr3.push(arr1[i])
+        
+      }
+    }
+  }
+  return arr3
+}
 
 
 
@@ -367,7 +394,8 @@ var colt = {
   After that console.log the length of the Array and make sure that it's equal to 4. 
 */
 
-//Code Here
+devMountainEmployees = [joe, cahlan, ryan, colt]
+console.log(devMountainEmployees.length)
 
 
 
@@ -376,7 +404,15 @@ var colt = {
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
 
-//Code Here
+function newEmployees() {
+  for (l = 0; l < devMountainEmployees.length; l++){
+    if(devMountainEmployees[l].name === 'Cahlan'){
+      devMountainEmployees.splice(l,1)
+    }
+  }
+  return devMountainEmployees
+}
+newEmployees(devMountainEmployees)
 
 
 
@@ -388,7 +424,7 @@ var colt = {
   Create an empty array called users.
 */
 
-//Code Here
+let users = []
 
 
 
@@ -406,9 +442,23 @@ var user1 = {
     username: 'ihazcode'
 };
 // Do not edit the code above.
+var user2 = {
+  name: 'matt',
+  email: 'matt@devmounta.in',
+  password: 'matt',
+  username: 'matt'
+};
 
-//Code Here
+var user3 = {
+  name: 'josh',
+  email: 'josh@devmounta.in',
+  password: 'josh',
+  username: 'josh'
+};
 
+
+
+users = [user1, user2, user3]
 
 
 /*
@@ -421,7 +471,12 @@ var user1 = {
   Once you find the array index he's located in, delete him from the array.
 */
 
-//Code Here
+function loopThroughUsers(arr){
+  for(let i = 0; i < arr.length; i ++)
+  if (arr[i].email === 'mark.mciver@devmounta.in') {
+    arr.splice(i, 1)
+  }
+}
 
 
 
